@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="cn.kgc.hibernate.entity.User" table="tb_user" select-before-update="false">
+        <!--主键映射-->
+        <id name="id" type="java.lang.Integer">
+            <!--主键策略-->
+            <generator class="native"/>
+        </id>
+        <!--普通属性-->
+        <property name="userName" type="java.lang.String"/>
+        <property name="password" type="java.lang.String"/>
+        <property name="createDate" type="java.util.Date"/>
+    </class>
+</hibernate-mapping>
